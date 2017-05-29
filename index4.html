@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        /*
+        * Задание 1 Создайте четыре функции для арифметических действий:
+         * (Add – сложение, Sub – вычитание, Mul – умножение, Div – деление).
+         * Каждая функция должна принимать два параметра и выводить на экран
+          * результат вычисления. Функция деления должна делать проверку деления
+           * на ноль. Пользователь вводит значения, над которыми хочет произвести
+            * операцию и выбрать саму операцию.*/
+        function Add(a, b){
+            return a + b;
+        }
+        function Sub(a, b){
+            return a - b;
+        }
+        function Mul(a, b){
+            return a * b;
+        }
+        function Div(a, b){
+            if(b != 0){
+                return a/b;
+            }
+            else
+                return "Error! Dividing by zero!";
+        }
+
+        var x = +prompt("Input the first number");
+        var y = +prompt("Input the second number");
+        var op = prompt("Input operation (+ - * /)");
+        switch(op){
+            case "+" : document.write(Add(x, y)); break;
+            case "-" : document.write(Sub(x, y)); break;
+            case "*" : document.write(Mul(x, y)); break;
+            case "/" : document.write(Div(x, y)); break;
+            default : "Operation is not correct<br/>";
+        }
+
+
+        /*
+        * Задание 2 Напишите функцию, которая будет принимать число и
+        * определять:
+         1. Является ли введенное число положительным или отрицательным.
+         2. Является ли оно простым
+         3. Делится ли оно на 2, 5, 3, 6, 9 без остатка
+         */
+
+        function check(a){
+            if(a >= 0){
+                document.write("<br/>The number is positive<br/>");
+            }
+            else{
+                document.write("The number is negative<br/>");
+            }
+            if(a%2 == 0){
+                document.write("The number is simple<br/>");
+            }
+            else{
+                document.write("The number is not simple<br/>");
+            }
+            if(a%5 == 0){
+                document.write("The number is dividing by 5<br/>");
+            }
+            if(a%3 == 0){
+                document.write("The number is dividing by 3<br/>");
+            }
+            if(a%6 == 0){
+                document.write("The number is dividing by 6<br/>");
+            }
+            if(a%9 == 0){
+                document.write("The number is dividing by 9<br/>");
+            }
+        }
+        check(45);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /*
+        * Задание 2 Дано два числа A и B где (A<B) . Выведите на экран
+        * суму всех чисел , расположенных в числовом промежутке от А до В .
+        * Выведите на экран все нечетные значения, расположенные в числовом
+        * промежутке от А до В .
+         * */
+        var a = 10;
+        var b = 20;
+        var i = a + 1;
+        var sum = 0;
+        document.write("All odd numbers between "+a+" and "+b+": ");
+        while(i < b){
+            if(i % 2 != 0){
+                document.write(i + " ");
+            }
+            sum += i;
+            i++;
+        }
+        document.write("<br/>Sum of all numbers between "+a+" and "+b+": "+sum+"<hr/>");
+        /*
+        * Задание 3 Напишите программу, которая будет рассчитывать и выводить
+        * на экран количество возможных вариантов доставки товара. Для решения
+         * задачи, используйте факториал N!, рассчитываемый с помощью цикла
+         * do while .
+        * */
+        var n = 6;
+        var fact = 1;
+        document.write(n+"! = ");
+        do{
+            fact *= n;
+            n--;
+        }
+        while(n>0)
+        document.write(fact+"<hr/>");
+        /*
+        * Задание 4 Используя циклы нарисуйте в браузере с помощью пробелов
+         * (&nbsp) и звездочек (*) : · Прямоугольник . · Прямоугольный
+         * треугольник. · Равносторонний треугольник . · Ромб.
+
+         * */
+        var a = 7, b = 3;
+        for(var i=0;i<b;i++){
+            for(var j=0; j<a;j++){
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+        document.write("<br/>");
+        for(var i = 1; i<=a; i++){
+            for(var j = 1; j<=i;j++){
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+        document.write("<br/>");
+        document.write("<pre>");
+        for (i=1; i<=a; i++) {
+            for (j = 1; j <= a - i; j++) {
+                document.write(" ");
+            }
+            for (var t = 1; t <= 2 * i - 1; t++) {
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+        document.write("</pre><br/>");
+
+        document.write("<pre>");
+        for (i=1; i<=a; i++) {
+            for (j = 1; j <= a - i; j++) {
+                document.write(" ");
+            }
+            for (var t = 1; t <= 2 * i - 1; t++) {
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+        for (i=a-1; i>0; i--) {
+            for (j = 1; j <= a - i; j++) {
+                document.write(" ");
+            }
+            for (var t = 1; t <= 2 * i - 1; t++) {
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+        document.write("</pre><br/>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
