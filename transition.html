@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            font:1em Arial;
+            text-transform: uppercase;
+        }
+        .nav{
+            list-style: none;
+            padding: 0;
+            margin: 30px;
+            width: 50px;
+            opacity: 0.5;
+
+            transition: opacity .2s ease-in-out;
+            -moz-transition: opacity .2s ease-in-out;
+            -o-transition: opacity .2s ease-in-out;
+            -webkit-transition: opacity .2s ease-in-out;
+        }
+
+        .nav:hover{
+            opacity: 1;
+        }
+        .nav li{
+           height: 50px;
+            width: 50px;
+            overflow: hidden;/*hide text*/
+            -moz-transition: width 0.2s ease-in-out, height .2s ease-in-out .2s;
+            -o-transition: width 0.2s ease-in-out, height .2s ease-in-out .2s;
+            -webkit-transition: width 0.2s ease-in-out, height .2s ease-in-out .2s;
+            transition: width 0.2s ease-in-out, height .2s ease-in-out .2s;
+        }
+        .nav li:hover{
+            width: 200px;
+            height: 130px;
+        }
+        .nav li a{
+            display: block;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            background: #bbb;
+            margin: 1px;
+            color:#fff;
+            padding-left:15px;
+            cursor: pointer;
+
+
+            transition-property: all;/*for all properties*/
+            transition-duration: .2s;/*delay*/
+            transition-timing-function: ease-in-out;/*natural animation*/
+            /*transition : background .2s ease-in-out;*/
+            -moz-transition-property: all;/*for all properties*/
+            -moz-transition-duration: .2s;/*delay*/
+            -moz-transition-timing-function: ease-in-out;/*natural animation*/
+
+            -webkit-transition-property: all;/*for all properties*/
+            -webkit-transition-duration: .2s;/*delay*/
+            -webkit-transition-timing-function: ease-in-out;/*natural animation*/
+
+            -o-transition-property: all;/*for all properties, for Opera*/
+            -o-transition-duration: .2s;/*delay*/
+            -o-transition-timing-function: ease-in-out;/*natural animation*/
+
+
+        }
+        .nav li a:hover{
+            background: #2fc5ff;
+        }
+        .nav li a:first-child{
+            font-size: 1.1em;
+            height: 50px;
+            line-height: 50px;
+            position: relative;/*for icons*/
+            text-indent: 36px;
+        }
+        .nav li a:first-child::before{
+            content: '';
+            position: absolute;
+            display: block;
+            height: 32px;
+            width: 32px;
+            top:9px;
+            left:9px;
+        }
+        .main-menu a:first-child::before{
+            background: url(http://defaulticon.com/images/icons32x32/home.png?itok=4tougUBV) center no-repeat;
+
+        }
+        .settings a:first-child::before{
+            background: url(http://defaulticon.com/images/icons32x32/settings.png?itok=f3WwNrKf) center no-repeat;
+
+        }
+        .link a:first-child::before{
+            background: url(http://defaulticon.com/images/icons32x32/link.png?itok=ZWITPB3E) center no-repeat;
+
+        }
+        .search a:first-child::before{
+            background: url(http://defaulticon.com/images/icons32x32/search_0.png?itok=eqsHkE5C) center no-repeat;
+
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="main-menu">
+            <a href="#">Main menu</a>
+            <a href="#">Products</a>
+            <a href="#">Store</a>
+        </li>
+        <li class="settings">
+            <a href="#">Settings</a>
+            <a href="#">Products</a>
+            <a href="#">Store</a>
+        </li>
+        <li class="link">
+            <a href="#">Links</a>
+            <a href="#">Products</a>
+            <a href="#">Store</a>
+        </li>
+        <li class="search">
+            <a href="#">Search</a>
+            <a href="#">Products</a>
+            <a href="#">Store</a>
+        </li>
+    </ul>
+</body>
+</html>
