@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            font: 1em Arial;
+
+        }
+        #wrapper{
+            margin:80px;
+            -webkit-perspective: 900px;
+        }
+        #cube{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            -webkit-transform-origin: 50% 50% -150px;
+            -webkit-transform-style: preserve-3d;
+            /*transform: rotate3d(1,-1,1,50deg);*/
+        }
+        .side{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            background: rgba(0,0,0,.2);
+            background: -webkit-radial-gradient(rgba(0,0,0,.1), rgba(0,0,0,.5));
+            border: 10px solid #fff;
+            border-radius: 10px;
+            color: #fff;
+            line-height: 300px;
+            text-align: center;
+            text-shadow: 0 1px 3px rgba(0,0,0,.4);
+            box-shadow: 0 0 6px rgba(0,0,0,.5);
+            -webkit-transform-origin: 50% 50% -150px;
+        }
+        #side2{
+            -webkit-transform: rotateY(90deg);
+        }
+        #side3{
+            -webkit-transform: rotateY(-90deg);
+        }
+        #side4{
+            -webkit-transform: rotateX(90deg);
+        }
+        #side5{
+            -webkit-transform: rotateX(-90deg);
+        }
+        #side6{
+            -webkit-transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="cube">
+            <div class="side" id="side1"></div>
+            <div class="side" id="side2"></div>
+            <div class="side" id="side3"></div>
+            <div class="side" id="side4"></div>
+            <div class="side" id="side5"></div>
+            <div class="side" id="side6"></div>
+
+        </div>
+    </div>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(document).mousemove(function(e){
+            $('#cube').css({'transform':'rotateX('+e.pageY+'deg) rotateY('+ e.pageX+'deg)'});
+        });
+    });
+</script>
+</body>
+</html>
